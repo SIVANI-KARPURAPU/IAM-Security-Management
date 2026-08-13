@@ -70,6 +70,8 @@ A virtual MFA device was enabled for the Admin-Manager account using an authenti
 
 This provides an additional authentication layer for the privileged administrator account.
 
+![Administrator MFA](admin-MFA.png)
+
 ### Step 4 — Test User Access
 
 Each user was logged into the AWS Management Console separately.
@@ -120,6 +122,8 @@ This access model follows the **Principle of Least Privilege**, where users rece
 
 The administrator has full access to AWS services and IAM management capabilities.
 
+---
+
 ### Developer-Yamuna
 
 **Role:** Developer
@@ -130,9 +134,11 @@ The developer can manage AWS resources but cannot administer IAM users and permi
 
 **IAM Test Result:** Access Denied
 
-![Developer IAM Access Denied](screenshots/developer-denied.png)
+![Developer IAM Access Denied](developer-denied.png)
 
 This demonstrates separation of administrative responsibilities from development activities.
+
+---
 
 ### HR-Shivani
 
@@ -144,7 +150,7 @@ The HR user is provided with read-only access to AWS resources and cannot perfor
 
 **Modification Test Result:** Access Denied
 
-![HR Access Restriction](screenshots/hr-user-denied.png)
+![HR Access Restriction](hr-user-denied.png)
 
 This demonstrates the Principle of Least Privilege.
 
@@ -191,7 +197,7 @@ Actual login and access tests were performed to verify that the configured polic
 
 The repository contains AWS Console screenshots demonstrating the implementation and validation of the security controls.
 
-The complete AWS Console evidence is available in the `screenshots` folder, including:
+The complete AWS Console evidence is available in the repository, including:
 
 * IAM user creation
 * User list
@@ -211,16 +217,14 @@ IAM-Security-Management/
 │
 ├── README.md
 ├── Architecture.png
-│
-└── screenshots/
-    ├── admin-created.png
-    ├── admin-login.png
-    ├── admin-MFA.png
-    ├── developer-denied.png
-    ├── he-ec2-denied.png
-    ├── hr-login.png
-    ├── hr-user-denied.png
-    └── users-list.png
+├── admin-created.png
+├── admin-login.png
+├── admin-MFA.png
+├── developer-denied.png
+├── he-ec2-denied.png
+├── hr-login.png
+├── hr-user-denied.png
+├── users-list.png
 ```
 
 ---
